@@ -8,7 +8,9 @@
 			.sem-borda{
 				border-radius: 0px;
 				}
-
+			nav{
+				position: fixed;
+			}
 		</style>
 	</head>
 
@@ -45,13 +47,13 @@
 		</nav>
 
 
-		<center>
+<!--		<center>
 		<div class="container-fluid">
-			<div class="row">
-				<iframe  style="max-width:100%;width:100%;height:720px;" frameborder="0" name="rush" src="prin.php" >Este navegador não é compativel</iframe>
-			</div>
+			<div class="row"> -->
+				<iframe  style="width: 100%; height: 100%;max-height: 100%;max-width: 100%;position: fixed;" frameborder="0" name="rush" src="prin.php" >Este navegador não é compativel</iframe>
+<!--			</div>
 		</div>
-		</center>
+		</center> -->
 		<script type="text/javascript" src="/BST/jquery.js"></script>
 		<script type="text/javascript" src="/BST/js/bootstrap.js"></script>
 	</body>
