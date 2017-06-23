@@ -40,7 +40,7 @@
 			</div>	
 			<div class="form-group">
 				<label for="">Telefone</label>
-				<input type="text" class="form-control" name="TEL" placeholder="Insira o Telefone" data-mask="(00)000000000">
+				<input type="number" class="form-control" name="TEL" placeholder="Insira o Telefone" data-mask="(00)000000000">
 			</div>
 			<div class="form-group">
 				<label for="">E-mail</label>
@@ -79,7 +79,7 @@
             print "limite maximo de".$maximo."bytes";
         }
         else{
-            move_uploaded_file($_FILES['arquivo']['tmp_name'], 'dados/fotos/foto'.$_FILES['arquivo']['name']);
+            move_uploaded_file($_FILES['arquivo']['tmp_name'], 'dados/fotos/foto_'.$_FILES['arquivo']['name']);
         }
     
     }
