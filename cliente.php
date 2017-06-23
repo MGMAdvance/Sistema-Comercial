@@ -58,11 +58,7 @@
 			</div>	
 			<div class="form-group">
 				<label for="">Telefone</label>
-<<<<<<< HEAD
 				<input type="text" class="form-control" name="TEL" placeholder="Insira o Telefone" id="fone">
-=======
-				<input type="text" class="form-control" name="TEL" placeholder="Insira o Telefone" data-mask="(00)000000000">
->>>>>>> 0058c74584900ed9f95a590d48509ff8a15b6885
 			</div>
 			<div class="form-group">
 				<label for="">E-mail</label>
@@ -153,12 +149,6 @@ CEP: ",$_POST ['CEP'],"
 <div></pre><br>
 	</div>
     <br>
-<<<<<<< HEAD
 
-=======
-	<script type="text/javascript" src="/BST/jquery.js"></script>
-	<script src="jquery.mask.js"></script>
-	<script type="text/javascript" src="/BST/js/bootstrap.js"></script>
->>>>>>> 0058c74584900ed9f95a590d48509ff8a15b6885
 </body>
 </html>
