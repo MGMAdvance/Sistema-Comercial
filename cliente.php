@@ -89,10 +89,14 @@ CEP: ",$_POST ['CEP'],"
 
 			<!-- usando if de modo "indireto" utilizando ":" -->
 			<?php if (validarCPF($_POST['CPF'])): ?>
+
 				<b><h3><p class="text-danger">CPF ESTA INCORRETO</p></b></h3>
+
 			<?php else: ?>
+
 				<h3><b><p class="text-success">CPF VALIDO</p></b></h3>
 				</div></pre><br>
+				
 			<?php endif; ?>
 
 	</div>
