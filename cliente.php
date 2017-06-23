@@ -40,7 +40,7 @@
 			</div>	
 			<div class="form-group">
 				<label for="">Telefone</label>
-				<input type="number" class="form-control" name="TEL" placeholder="Insira o Telefone" data-mask="(00)000000000">
+				<input type="text" class="form-control" name="TEL" placeholder="Insira o Telefone" data-mask="(00)000000000">
 			</div>
 			<div class="form-group">
 				<label for="">E-mail</label>
@@ -130,6 +130,7 @@ CEP: ",$_POST ['CEP'],"
 	</div>
     <br>
 	<script type="text/javascript" src="/BST/jquery.js"></script>
+	<script src="jquery.mask.js"></script>
 	<script type="text/javascript" src="/BST/js/bootstrap.js"></script>
 </body>
 </html>

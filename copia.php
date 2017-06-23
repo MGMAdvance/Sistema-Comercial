@@ -29,7 +29,6 @@ $destino = array (
 
 mkdir('backup');
 
-
 for ( $i=0; $i < count($origem) ; $i++ ):?>
 
 	<?php if ( copy($origem[$i],$destino[$i]) ):?>
