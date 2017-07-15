@@ -1,0 +1,14 @@
+{
+    "name": "Sistema Comercial",
+    "description": "Atividade de sala de aula",
+    "authors": [
+        {
+            "name": "Matheus Gonçalves",
+            "name": "Andrey Oliveira"
+        }
+    ],
+
+    "require": {
+        "components/bootstrap": "v3.3.7"
+    }
+}
