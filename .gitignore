@@ -45,3 +45,6 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Para todos os arquivos e sub-pastas localizados na pasta vendor/
+vendor/
