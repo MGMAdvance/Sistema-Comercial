@@ -8,4 +8,4 @@ Sistema sendo desenvolvido em aula
     - Font Awesome
 
 ## Como usar
-1. Com o composer instalado utilize o comando `php composer.phar install`
+1. Com o composer instalado utilize o comando `php composer.phar install`, caso necessário utilize `composer update` para atualizar as dependências.
