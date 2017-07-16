@@ -5,8 +5,8 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="/BST/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="/BST/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="vendor\components\bootstrap\css\bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="vendor\fortawesome\font-awesome\css\font-awesome.css">
 	<title></title>
 	<style type="text/css">
 		pre{
@@ -129,7 +129,7 @@ CEP: ",$_POST ['CEP'],"
 <div></pre><br>
 	</div>
     <br>
-	<script type="text/javascript" src="/BST/jquery.js"></script>
-	<script type="text/javascript" src="/BST/js/bootstrap.js"></script>
+		<script type="text/javascript" src="vendor\components\jquery\jquery.js"></script>
+		<script type="text/javascript" src="vendor\components\bootstrap\js\bootstrap.js"></script>
 </body>
 </html>

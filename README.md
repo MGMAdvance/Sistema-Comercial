@@ -1,10 +1,11 @@
-# Sistema-Comercial
+# Sistema Comercial
 Sistema sendo desenvolvido em aula
+(Branch: Rock)
 
-# Requesitos
-* Bootstrap
-* Font Awesome
+## Requesitos
+* Composer
+    - Boostrap
+    - Font Awesome
 
-# Como usar
-1. Renomeie a pasta do **Bootstrap** para `BST` e coloque na pasta root do seu Server;
-2. Insira o conteúdo do **Font Awesome** dentro da pasta `BST`.
+## Como usar
+1. Com o composer instalado utilize o comando `php composer.phar install`

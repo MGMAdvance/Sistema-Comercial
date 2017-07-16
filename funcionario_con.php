@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="/BST/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="vendor\components\bootstrap\css\bootstrap.css">
 	<pre>
 <?php
 	$caminho = 'dados\funcionario.txt';

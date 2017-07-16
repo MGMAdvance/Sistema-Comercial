@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="/BST/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="vendor\components\bootstrap\css\bootstrap.css">
 </head>
 <body>
 

@@ -1,12 +1,12 @@
 <?php
 	include_once('vCPF-CNPJ.php');
-?>]
+?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="/BST/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="/BST/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="vendor\components\bootstrap\css\bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="vendor\fortawesome\font-awesome\css\font-awesome.css">
 	<title></title>
 	<style type="text/css">
 		pre{
@@ -58,8 +58,6 @@
 
 		</form>
 				<br>
-		<link rel="stylesheet" type="text/css" href="/BST/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="/BST/css/font-awesome.css">
 	<?php
 		$origem = 'dados\Fornecedor.txt';
 		$cliente = array (date("[d/m/y - H:i:s]"),"
@@ -102,7 +100,7 @@ CEP: ",$_POST ['CEP'],"
 
 			?>
 	</div>
-	<script type="text/javascript" src="/BST/jquery.js"></script>
-	<script type="text/javascript" src="/BST/js/bootstrap.js"></script>
+		<script type="text/javascript" src="vendor\components\jquery\jquery.js"></script>
+		<script type="text/javascript" src="vendor\components\bootstrap\js\bootstrap.js"></script>>
 </body>
 </html>

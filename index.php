@@ -2,7 +2,7 @@
 <html>
 	<head>
 	<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="/BST/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="vendor\components\bootstrap\css\bootstrap.css">
 		<title>Sistema Comercial</title>
 		<style type="text/css">
 			.sem-borda{
@@ -34,7 +34,7 @@
 
 		<iframe  style="width: 100%; height: 100%;max-height: 100%;max-width: 100%;position: fixed;" frameborder="0" name="rush" src="prin.php" >Este navegador não é compativel</iframe>
 
-		<script type="text/javascript" src="/BST/jquery.js"></script>
-		<script type="text/javascript" src="/BST/js/bootstrap.js"></script>
+		<script type="text/javascript" src="vendor\components\jquery\jquery.js"></script>
+		<script type="text/javascript" src="vendor\components\bootstrap\js\bootstrap.js"></script>
 	</body>
 </html>
