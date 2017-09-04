@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="/BST/css/bootstrap.css">
-		<title>Sistema Comercial</title>
+		<title>Sistema muito doido slá</title>
 		<style type="text/css">
 			.sem-borda{
 				border-radius: 0px;
@@ -32,8 +32,14 @@
 			</div>
 		</nav>
 
-		<iframe  style="width: 100%; height: 100%;max-height: 100%;max-width: 100%;position: fixed;" frameborder="0" name="rush" src="prin.php" >Este navegador não é compativel</iframe>
 
+<!--		<center>
+		<div class="container-fluid">
+			<div class="row"> -->
+				<iframe  style="width: 100%; height: 100%;/*max-height: 100%;max-width: 100%;*/position: absolute;" frameborder="0" name="rush" src="prin.php" >Este navegador não é compativel</iframe>
+<!--			</div>
+		</div>
+		</center> -->
 		<script type="text/javascript" src="/BST/jquery.js"></script>
 		<script type="text/javascript" src="/BST/js/bootstrap.js"></script>
 	</body>

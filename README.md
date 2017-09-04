@@ -1,10 +1,9 @@
-# Sistema-Comercial
-Sistema sendo desenvolvido em aula
+#Sistema Comercial
 
-# Requesitos
-* Bootstrap
-* Font Awesome
+Sistema sendo desenvolvido em sala de aula.
 
-# Como usar
-1. Renomeie a pasta do **Bootstrap** para `BST` e coloque na pasta root do seu Server;
-2. Insira o conteúdo do **Font Awesome** dentro da pasta `BST`.
+##Recomendação
+Não utilize mais as funções `mysql_` pois foi descontinuado no PHP 7, use o **PDO** ou **MySQLi**.
+
+##OBS
+Por ser desenvolvido em aula acrescente a pasta a **BST**(Bootstrap) na raiz do seu WebServer.

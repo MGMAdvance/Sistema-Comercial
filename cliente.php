@@ -37,12 +37,12 @@
 </head>
 <body>
 	<div class="container">
-		<form action="" method="POST" role="form" enctype="multipart/form-data">
+		<form  method="POST" role="form" enctype="multipart/form-data">
 			<legend>Cliente</legend>
 		
 			<div class="form-group">
 				<label for="">Código</label>
-				<input type="text" class="form-control" name="CODIGO" placeholder="Insira o Código">
+				<input type="text" class="form-control" name="CODIGO" readonly placeholder="Insira o Código">
 			</div>
 			<div class="form-group">
 				<label for="">Nome</label>
@@ -81,13 +81,15 @@
 
 			<br>
 			<?php
+			include 'conexao.php';
+
         echo "<pre>";
         //Inicio upload de imagem
         
         if(isset($_POST['btnEnviar'])){
         echo "<div class='container'>";
     $foto = $_FILES['arquivo'];
-	$maximo = 500000;
+	$maximo = 50000000000;
 	$extensoes = array(".jpg",".jpeg",".gif",".png");
 	$ext = strrchr($foto['name'],'.');
 
@@ -144,8 +146,30 @@ CEP: ",$_POST ['CEP'],"
 				echo '<h3><b><p class="text-success">CPF VALIDO</p></b></h3>';
                 }
         }
+								        
+				    if (!empty($_POST['CEP'])) {
+
+				    	$inserir = mysql_query("insert into tb_cliente(nm_cliente,
+											cpf_cliente,
+											rg_cliente,
+											cep_cliente,
+											cel_cliente,
+											email_cliente)
+
+											values('$cliente[4]',
+													'$cliente[6]',
+													'$cliente[8]',
+													'$cliente[10]',
+													'$cliente[14]',
+													'$cliente[12]')");
+
+				   }else{				    
+        echo "<H1>TA FUNCIONANDO</H1>";
+
+
+
+}
         ?>
-	});
 <div></pre><br>
 	</div>
     <br>

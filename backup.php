@@ -13,14 +13,6 @@
 					<button class="btn btn-warning">
 						<span class="glyphicon glyphicon-duplicate"></span> Copiar</button>
 				</a>
-				<a href="apagar.php">
-					<button class="btn btn-danger">
-						<span class="glyphicon glyphicon-trash"></span> Apagar</button>
-				</a>
-				<a href="check.php">
-					<button class="btn btn-success">
-						<span class="glyphicon glyphicon-folder-open"></span> Check</button>
-				</a>
 			</div>
 		</div>
 	</div>

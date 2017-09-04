@@ -1,3 +1,4 @@
+<?php require 'conexao.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,12 +17,12 @@
 </head>
 <body>
 	<div class="container">
-		<form action="" method="POST" role="form">
+		<form action="" method="POST" role="form" nctype="multipart/form-data">
 			<legend>Funcionário</legend>
 		
 			<div class="form-group">
 				<label for="">Código</label>
-				<input type="text" class="form-control" name="CODIGO" placeholder="Insira o Código">
+				<input type="text" class="form-control" name="CODIGO" readonly placeholder="Insira o Código">
 			</div>
 			<div class="form-group">
 				<label for="">Nome</label>
@@ -56,7 +57,7 @@
 	</div>
 	<br>
 			<?php
-
+/*
 	$origem = 'dados\funcionario.txt';
 	$cliente = array (date("[d/m/y - H:i:s]"),"
 CODIGO: ",$_POST ['CODIGO'],"
@@ -77,7 +78,7 @@ if($cliente[2] != ""){
 			}
 		}
 			
-			echo "<pre>";
+			
 			$cliente = array ($_POST ['CODIGO'],$_POST['NOME'],$_POST ['CPF'],$_POST ['RG'],$_POST ['TEL'],$_POST ['EMAIL'],$_POST ['CEP']);
 			
 			for ($x = 0;$x < 7; $x++)
@@ -85,7 +86,27 @@ if($cliente[2] != ""){
 					print $cliente[$x]."<br>";
 
 				}
+*/
+echo "<pre>";
+				if (!empty($_POST)) {
+					extract($_POST);
+					$inserir = mysql_query("INSERT into tb_funcionario(nm_funcionario,
+											cpf_funcionario,
+											rg_funcionario,
+											fixo_funcionario,
+											email_funcionario,
+											cep_funcionario)
 
+											values(	'$NOME',
+													'$CPF',
+													'$RG',
+													'$TEL',
+													'$EMAIL',
+													'$CEP')") or die(mysql_error());
+
+				}else{
+					echo "Aguardando...";
+				}
 			echo "</pre><br>";
 			?>
 	<script type="text/javascript" src="/BST/jquery.js"></script>
