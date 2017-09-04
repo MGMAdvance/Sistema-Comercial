@@ -1,12 +1,13 @@
 <?php
 	include_once('vCPF-CNPJ.php');
+	include 'conexao.php';
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="vendor\components\bootstrap\css\bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="vendor\fortawesome\font-awesome\css\font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="/BST/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="/BST/css/font-awesome.css">
 	<title></title>
 	<style type="text/css">
 		pre{
@@ -24,7 +25,7 @@
 		
 			<div class="form-group">
 				<label for="">Código</label>
-				<input type="text" class="form-control" NAME="CODIGO"  placeholder="Insira o Código">
+				<input type="text" class="form-control" NAME="CODIGO" readonly placeholder="Insira o Código">
 			</div>
 			<div class="form-group">
 				<label for="">Nome</label>
@@ -35,7 +36,7 @@
 				<input type="text" class="form-control" NAME="CNPJ" placeholder="Insira o CNPJ">
 			</div>
 			<div class="form-group">
-				<label for="">J.E</label>
+				<label for="">i.E</label>
 				<input type="text" class="form-control" NAME="JE" placeholder="Insira o J.E">
 			</div>
 			<div class="form-group">
@@ -58,7 +59,10 @@
 
 		</form>
 				<br>
+		<link rel="stylesheet" type="text/css" href="/BST/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="/BST/css/font-awesome.css">
 	<?php
+	/*
 		$origem = 'dados\Fornecedor.txt';
 		$cliente = array (date("[d/m/y - H:i:s]"),"
 CODIGO: ",$_POST ['CODIGO'],"
@@ -77,30 +81,60 @@ CEP: ",$_POST ['CEP'],"
 				echo "Erro";
 			}
 		}
-
+*/
 
 
 			echo "<pre>";
 
-			$cliente = array ($_POST ['CODIGO'],$_POST['NOME'],$_POST ['CNPJ'],$_POST['JE'],$_POST ['TEL'],$_POST ['EMAIL'],$_POST ['CEP']);
-			for ($x = 0;$x < 12; $x++)
-				{
-					print $cliente[$x]."<br>";
+			/*
+			//Se nao tiver nada 
+			if(!empty($_POST)) {
 
+				$cliente = array ($_POST ['CODIGO'],$_POST['NOME'],$_POST ['CNPJ'],$_POST['JE'],$_POST ['TEL'],$_POST ['EMAIL'],$_POST ['CEP']);
+				for ($x = 0;$x < 12; $x++)
+					{
+						print $cliente[$x]."<br>";
+
+					}
+
+				//validador
+				
+				if(validarCNPJ($_POST['CNPJ'])){
+					echo "CNPJ Correto";
+					}else{
+					echo "CNPJ incorreto";
 				}
+				
+			}*/
 
-			if(validarCNPJ($_POST['CNPJ'])){
-				echo "CNPJ Correto";
-			}else{
-				echo "CNPJ incorreto";
-			}
+			if (!empty($_POST)) {
+
+						extract($_POST);
+				    	$inserir = mysql_query("INSERT into tb_fornecedor(nm_fornecedor,
+											cnpj_fornecedor,
+											ie_fornecedor,
+											fixo_fornecedor,
+											email_fornecedor,
+											cep_fornecedor)
+
+											values(	'$NOME',
+													'$CNPJ',
+													'$JE',
+													'$TEL',
+													'$EMAIL',
+													'$CEP')") or die(mysql_error());
+
+				   }else{				    
+        echo "<H1>TA FUNCIONANDO</H1>";
+
+    }
 
 			echo "</pre><br>";
 
 
 			?>
 	</div>
-		<script type="text/javascript" src="vendor\components\jquery\jquery.js"></script>
-		<script type="text/javascript" src="vendor\components\bootstrap\js\bootstrap.js"></script>>
+	<script type="text/javascript" src="/BST/jquery.js"></script>
+	<script type="text/javascript" src="/BST/js/bootstrap.js"></script>
 </body>
 </html>

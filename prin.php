@@ -1,12 +1,12 @@
 <html>
 <body>
-	<link rel="stylesheet" type="text/css" href="vendor\components\bootstrap\css\bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="vendor\fortawesome\font-awesome\css\font-awesome.css">
+<link rel="stylesheet" type="text/css" href="/BST/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/BST/css/font-awesome.css">
 
 <div class="container">
 <div class="row">
 	<div class="col-xs-6 col-sm-3 col-md-2">
-		<a href="#" class="btn btn-primary">
+		<a class="btn btn-primary">
 			<div class="row">
 				<div class="col-xs-12 text-center">
 					<i class="fa fa-plus fa-5x"></i>
@@ -91,7 +91,7 @@
 </div>
 </div>
 
-		<script type="text/javascript" src="vendor\components\jquery\jquery.js"></script>
-		<script type="text/javascript" src="vendor\components\bootstrap\js\bootstrap.js"></script>
+		<script type="text/javascript" src="/BST/jquery.js"></script>
+		<script type="text/javascript" src="/BST/js/bootstrap.js"></script>
 		</body>
 </html>

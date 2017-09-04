@@ -1,11 +1,9 @@
-# Sistema Comercial
-Sistema sendo desenvolvido em aula
-(Branch: Rock)
+#Sistema Comercial
 
-## Requesitos
-* Composer
-    - Boostrap
-    - Font Awesome
+Sistema sendo desenvolvido em sala de aula.
 
-## Como usar
-1. Com o composer instalado utilize o comando `php composer.phar install`, caso necessário utilize `composer update` para atualizar as dependências.
+##Recomendação
+Não utilize mais as funções `mysql_` pois foi descontinuado no PHP 7, use o **PDO** ou **MySQLi**.
+
+##OBS
+Por ser desenvolvido em aula acrescente a pasta a **BST**(Bootstrap) na raiz do seu WebServer.

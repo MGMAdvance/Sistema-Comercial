@@ -5,8 +5,24 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="vendor\components\bootstrap\css\bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="vendor\fortawesome\font-awesome\css\font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="/BST/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/BST/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="/BST/css/font-awesome.css">
+    
+    <script type="text/javascript" src="/BST/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="/BST/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/BST/js/bootstrap-notify.min.js"></script>
+    <script type="text/javascript" src="/BST/js/jquery.mask.min.js"></script>
+    <script type="text/javascript">
+       $(document).ready(function(){
+			$('#fone').mask('(00) 00000-0000');
+            $('#cep').mask('00000-000');
+            $('#cpf').mask('000.000.000-00', {reverse: true});
+            $('#cnpj').mask('00.000.000/0000-00', {reverse: true});
+            $('#rg').mask('00.000.000-0', {reverse: true});
+		})
+    </script>
+    
 	<title></title>
 	<style type="text/css">
 		pre{
@@ -16,15 +32,17 @@
 			color:white;
 		}
 	</style>
+    <script type="text/javascript" src="/BST/jquery.js"></script>
+	<script type="text/javascript" src="/BST/js/bootstrap.js"></script>
 </head>
 <body>
 	<div class="container">
-		<form action="" method="POST" role="form" enctype="multipart/form-data">
+		<form  method="POST" role="form" enctype="multipart/form-data">
 			<legend>Cliente</legend>
 		
 			<div class="form-group">
 				<label for="">Código</label>
-				<input type="text" class="form-control" name="CODIGO" placeholder="Insira o Código">
+				<input type="text" class="form-control" name="CODIGO" readonly placeholder="Insira o Código">
 			</div>
 			<div class="form-group">
 				<label for="">Nome</label>
@@ -32,15 +50,15 @@
 			</div>
 			<div class="form-group">
 				<label for="">CPF</label>
-				<input type="number" class="form-control" name="CPF" placeholder="Insira o CPF">
+				<input type="text" class="form-control" name="CPF" id="cpf" placeholder="Insira o CPF">
 			</div>
 			<div class="form-group">
 				<label for="">RG</label>
-				<input type="number" class="form-control" name="RG" placeholder="Insira o RG">
+				<input type="text" class="form-control" name="RG" id="rg" placeholder="Insira o RG">
 			</div>	
 			<div class="form-group">
 				<label for="">Telefone</label>
-				<input type="number" class="form-control" name="TEL" placeholder="Insira o Telefone" data-mask="(00)000000000">
+				<input type="text" class="form-control" name="TEL" placeholder="Insira o Telefone" id="fone">
 			</div>
 			<div class="form-group">
 				<label for="">E-mail</label>
@@ -48,8 +66,9 @@
 			</div>
 			<div class="form-group">
 				<label for="">CEP</label>
-				<input type="text" class="form-control" name="CEP" placeholder="Insira seu CPF">
-			</div><div class="form-group">
+				<input type="text" class="form-control" name="CEP" id="cep" placeholder="Insira seu CPF" >
+			</div>
+            <div class="form-group">
 				<label for="">Foto</label>
 				<input type="file" class="form-control" name="arquivo" placeholder="Busque sua foto">
 			</div>
@@ -62,13 +81,15 @@
 
 			<br>
 			<?php
+			include 'conexao.php';
+
         echo "<pre>";
         //Inicio upload de imagem
         
         if(isset($_POST['btnEnviar'])){
         echo "<div class='container'>";
     $foto = $_FILES['arquivo'];
-	$maximo = 500000;
+	$maximo = 50000000000;
 	$extensoes = array(".jpg",".jpeg",".gif",".png");
 	$ext = strrchr($foto['name'],'.');
 
@@ -79,7 +100,7 @@
             print "limite maximo de".$maximo."bytes";
         }
         else{
-            move_uploaded_file($_FILES['arquivo']['tmp_name'], 'dados/fotos/foto_'.$_FILES['arquivo']['name']);
+            move_uploaded_file($_FILES['arquivo']['tmp_name'], 'dados/fotos/foto'.$_FILES['arquivo']['name']);
         }
     
     }
@@ -125,11 +146,33 @@ CEP: ",$_POST ['CEP'],"
 				echo '<h3><b><p class="text-success">CPF VALIDO</p></b></h3>';
                 }
         }
+								        
+				    if (!empty($_POST['CEP'])) {
+
+				    	$inserir = mysql_query("insert into tb_cliente(nm_cliente,
+											cpf_cliente,
+											rg_cliente,
+											cep_cliente,
+											cel_cliente,
+											email_cliente)
+
+											values('$cliente[4]',
+													'$cliente[6]',
+													'$cliente[8]',
+													'$cliente[10]',
+													'$cliente[14]',
+													'$cliente[12]')");
+
+				   }else{				    
+        echo "<H1>TA FUNCIONANDO</H1>";
+
+
+
+}
         ?>
 <div></pre><br>
 	</div>
     <br>
-		<script type="text/javascript" src="vendor\components\jquery\jquery.js"></script>
-		<script type="text/javascript" src="vendor\components\bootstrap\js\bootstrap.js"></script>
+
 </body>
 </html>
