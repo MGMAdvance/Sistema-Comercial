@@ -1,46 +1,11 @@
-<!DOCTYPE html>
-<html>
-	<head>
-	<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="/BST/css/bootstrap.css">
-		<title>Sistema muito doido slá</title>
-		<style type="text/css">
-			.sem-borda{
-				border-radius: 0px;
-				}
-			nav{
-				position: fixed;
-			}
-		</style>
-	</head>
+<?php
+   require 'vendor/autoload.php';
+   $controller = new App\Mvc\Controller();
+   
+	require 'header.php';
 
-	<body>
-		
-		<nav class="navbar navbar-inverse sem-borda" role="navigation">
-			<div class="container-fluid">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-					<a class="navbar-brand" href="prin.php" target="rush">Sistema</a>
-				</div>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="backup.php" target="rush"><span class="glyphicon glyphicon-hdd"></span> Backup</a></li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Login</a></li>
-				</ul>
-				</div><!-- /.navbar-collapse -->
-			</div>
-		</nav>
+	require 'body.php';
 
+	require 'footer.php'; 
 
-<!--		<center>
-		<div class="container-fluid">
-			<div class="row"> -->
-				<iframe  style="width: 100%; height: 100%;/*max-height: 100%;max-width: 100%;*/position: absolute;" frameborder="0" name="rush" src="prin.php" >Este navegador não é compativel</iframe>
-<!--			</div>
-		</div>
-		</center> -->
-		<script type="text/javascript" src="/BST/jquery.js"></script>
-		<script type="text/javascript" src="/BST/js/bootstrap.js"></script>
-	</body>
-</html>
+?>
